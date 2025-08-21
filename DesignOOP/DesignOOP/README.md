@@ -41,7 +41,7 @@ Ou seja, uma classe pode existir sem a outra.
 
 
 ## 📌 Composição
-É um tipo de associação em que uma classe depende da outra para continuar existindo.  
+É um tipo de associação em que uma classe depende da outra para continuar existindo (Não faz sentido sem o objeto pai).  
 Por exemplo: se o objeto "pai" for destruído, o objeto "filho" também será destruído.  
 Isso pode resultar em uma quebra de responsabilidade, podendo gerar erros se não for bem planejado.
 
@@ -89,4 +89,3 @@ No código:
 - Para **facilitar testes unitários**.  
 - Para deixar o código **mais modular, flexível, fácil de manter e responsivo**.  
 - Para **trocar implementações sem precisar alterar** a classe que consome o serviço.
-esse markow está certo?
