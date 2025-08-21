@@ -26,11 +26,9 @@ Isso resulta em **reutilização de código** e melhor **organização hierárqu
 É a relação entre duas classes, onde uma utiliza a outra, mas **não existe dependência** entre elas.  
 Ou seja, uma classe pode existir sem a outra.
 
-| -------------- | ------------------------------------------------------------------------------------------- |
 | Conceito       | Característica                                                                              | 
 | -------------- | ------------------------------------------------------------------------------------------- | 
-| **Associação** | Relação fraca: um objeto pode conhecer o outro, mas não precisa depender dele para existir  | 
-| -------------- | ------------------------------------------------------------------------------------------- |
+| **Associação** | Relação fraca: um objeto pode conhecer o outro, mas não precisa depender dele para existir  |
 ---
 
 ## ✅ Pontos Positivos
@@ -46,11 +44,10 @@ Ou seja, uma classe pode existir sem a outra.
 É um tipo de associação em que uma classe depende da outra para continuar existindo.  
 Por exemplo: se o objeto "pai" for destruído, o objeto "filho" também será destruído.  
 Isso pode resultar em uma quebra de responsabilidade, podendo gerar erros se não for bem planejado.
-| -------------- | --------------------------------------------------------------------------|
+
 | Conceito       | Característica                                                            | 
 | -------------- | ------------------------------------------------------------------------- | 
 | **Composição** | Relação forte: um objeto "possui" outro e controla sua existência         |
-| -------------- | --------------------------------------------------------------------------|
 ---
 
 ## ✅ Pontos Positivos
