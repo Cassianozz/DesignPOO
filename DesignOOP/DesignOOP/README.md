@@ -1,4 +1,4 @@
-# 🧬 Herança em Java
+# 🧬 Herança
 
 A **herança** é um dos pilares da **Programação Orientada a Objetos (POO)**.  
 Ela vai permitir que uma classe filha (**subclasse**) reutilize atributos e métodos da classe pai (**superclasse**).  
@@ -11,7 +11,7 @@ Isso resulta em **reutilização de código** e melhor **organização hierárqu
 - **Organização hierárquica** → classes podem ser estruturadas de forma mais clara.  
 - **Polimorfismo** → permite usar objetos de subclasses como se fossem da superclasse.  
 
----
+--- 
 
 ## ⚠️ Desvantagens da Herança
 - **Aumento do acoplamento** → subclasses ficam fortemente ligadas à superclasse, podendo gerar erros em alterações futuras.  
@@ -20,81 +20,15 @@ Isso resulta em **reutilização de código** e melhor **organização hierárqu
 
 ---
 
-## 🔹 Exemplo Simples em Java
-
-```java
-// Superclasse (Classe Pai)
-class Animal {
-    String nome;
-
-    void comer() {
-        System.out.println(nome + " está se alimentando...");
-    }
-}
-
-// Subclasse (Classe Filha) herdando de Animal
-class Cachorro extends Animal {
-    void latir() {
-        System.out.println(nome + " está latindo alto!");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Cachorro dog = new Cachorro();
-        dog.nome = "Rex";
-
-        dog.comer(); // Método herdado da superclasse
-        dog.latir(); // Método da subclasse
-    }
-}
-
-
-# Associação em Java
+# Associação
 
 ## 📌 Associação
 É a relação entre duas classes, onde uma utiliza a outra, mas **não existe dependência** entre elas.  
 Ou seja, uma classe pode existir sem a outra.
 
-### Exemplo em Java:
-```java
-class Cachorro {
-    private String nome;
-
-    public Cachorro(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-}
-
-class Dono {
-    private String nome;
-
-    public Dono(String nome) {
-        this.nome = nome;
-    }
-
-    public void mandar(Cachorro cachorro) {
-        System.out.println(nome + " está ensinando " + cachorro.getNome());
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Dono dono = new Dono("Cassiano");
-        Cachorro cachorro = new Cachorro("Gabriel");
-
-        dono.mandar(cachorro); // Associação: Dono se relaciona com Cachorro
-    }
-}
-
-| Conceito       | Característica                                                                              | Exemplo         |
-| -------------- | ------------------------------------------------------------------------------------------- | --------------- |
-| **Associação** | Relação fraca: um objeto pode conhecer o outro, mas não precisa depender dele para existir  | Dono ↔ Cachorro |
-
+| Conceito       | Característica                                                                              | 
+| -------------- | ------------------------------------------------------------------------------------------- | 
+| **Associação** | Relação fraca: um objeto pode conhecer o outro, mas não precisa depender dele para existir  |
 ---
 
 ## ✅ Pontos Positivos
@@ -111,39 +45,9 @@ public class Main {
 Por exemplo: se o objeto "pai" for destruído, o objeto "filho" também será destruído.  
 Isso pode resultar em uma quebra de responsabilidade, podendo gerar erros se não for bem planejado.
 
-### Exemplo em Java:
-```java
-class Motor {
-    public void ligar() {
-        System.out.println("Motor ligado!");
-    }
-}
-
-class Carro {
-    private Motor motor;
-
-    public Carro() {
-        this.motor = new Motor(); // Composição: Carro cria e "possui" Motor
-    }
-
-    public void ligarCarro() {
-        motor.ligar();
-        System.out.println("Carro ligado!");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Carro carro = new Carro();
-        carro.ligarCarro(); // Motor só existe porque Carro existe
-    }
-}
-
-
-| Conceito       | Característica                                                            | Exemplo       |
-| -------------- | ------------------------------------------------------------------------- | ------------- |
-| **Composição** | Relação forte: um objeto "possui" outro e controla sua existência         | Carro → Motor |
-
+| Conceito       | Característica                                                            | 
+| -------------- | ------------------------------------------------------------------------- | 
+| **Composição** | Relação forte: um objeto "possui" outro e controla sua existência         |
 ---
 
 ## ✅ Pontos Positivos
@@ -185,3 +89,4 @@ No código:
 - Para **facilitar testes unitários**.  
 - Para deixar o código **mais modular, flexível, fácil de manter e responsivo**.  
 - Para **trocar implementações sem precisar alterar** a classe que consome o serviço.
+esse markow está certo?
